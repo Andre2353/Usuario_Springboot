@@ -16,6 +16,12 @@ public class Usuariorequest {
     public Usuariorequest() {
     }
 
+    public Usuariorequest(String name, String email, String senha) {
+        this.name = name;
+        this.email = email;
+        this.senha = senha;
+    }
+
     public Usuariorequest(String name, String email, String senha, LocalDate dtcriacao) {
         this.name = name;
         this.email = email;

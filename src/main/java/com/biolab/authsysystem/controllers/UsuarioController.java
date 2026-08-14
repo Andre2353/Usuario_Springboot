@@ -6,7 +6,6 @@ import com.biolab.authsysystem.entities.Usuario;
 import com.biolab.authsysystem.sevice.Usuarioservice;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,16 +18,29 @@ public class UsuarioController {
     public UsuarioController(Usuarioservice usuarioservice) {
         this.usuarioservice = usuarioservice;
     }
+
     @PostMapping
-    public ResponseEntity<?> criarusuario(@Valid @RequestBody Usuariorequest req){
-        return ResponseEntity.ok("criado com sucessp " +usuarioservice.criarUsuario(req));
+    public ResponseEntity<?> criarusuario(@Valid @RequestBody Usuariorequest req) {
+        return ResponseEntity.ok("criado com sucessp " + usuarioservice.criarUsuario(req));
     }
+
     @GetMapping
-    private  ResponseEntity<List<UsuarioResponse>> mostrar(){
-        return ResponseEntity.ok (usuarioservice.mostrarUsuarios());
+    public ResponseEntity<List<UsuarioResponse>> mostrar() { // Alterado de private para public
+        return ResponseEntity.ok(usuarioservice.mostrarUsuarios());
     }
+
     @GetMapping("/{id}")
-    public ResponseEntity<UsuarioResponse> buscarid(@PathVariable("id") Long id){
+    public ResponseEntity<UsuarioResponse> buscarid(@PathVariable("id") Long id) {
         return ResponseEntity.ok(usuarioservice.buscarid(id));
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> apagaid(@PathVariable Long id) {
+        return ResponseEntity.ok(usuarioservice.deletar(id));
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<String> atualizarid(@PathVariable Long id, @RequestBody Usuario usuario) {
+        return ResponseEntity.ok(usuarioservice.atualizarid(id, usuario));
     }
 }

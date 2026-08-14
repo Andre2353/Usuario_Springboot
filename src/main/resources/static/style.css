@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+button {
+    margin-top: 20px;
+
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #2563eb;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo button {
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: left;
+}
+
+th {
+    background-color: #f3f4f6;
+}
+
+button.excluir {
+    margin-top: 0;
+
+    background-color: #dc2626;
+}
+
+button.excluir:hover {
+    background-color: #b91c1c;
+}
+
+.busca {
+    display: flex;
+    gap: 10px;
+}
+
+.busca input {
+    max-width: 300px;
+}
+
+.busca button {
+    margin-top: 0;
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.sucesso {
+    color: green;
+}
+
+.erro {
+    color: red;
+}
+
+.usuario {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background-color: #f3f4f6;
+
+    border-radius: 5px;
+
+    line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+
+    .titulo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .busca {
+        flex-direction: column;
+    }
+
+    .busca input {
+        max-width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
