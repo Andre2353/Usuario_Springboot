@@ -1,0 +1,35 @@
+# 👤 Usuário Spring Boot
+
+> API RESTful desenvolvida em Java com Spring Boot focada no gerenciamento de usuários, abordando operações de cadastro, consulta, atualização e exclusão (CRUD).
+
+O projeto **Usuario_Springboot** é uma aplicação back-end criada para gerenciar os dados de usuários de um sistema. Ele serve como base para entender a construção de APIs, persistência de dados e a arquitetura MVC utilizando o ecossistema Spring.
+
+---
+
+## ✨ Funcionalidades
+
+- [x] **Cadastro de Usuários:** Criação de novos usuários com validação de dados.
+- [x] **Consulta (Leitura):** Listagem de todos os usuários ou busca específica por ID.
+- [x] **Atualização:** Edição das informações de um usuário existente.
+- [x] **Exclusão:** Remoção de usuários do banco de dados.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+Este projeto foi construído com as seguintes tecnologias:
+
+* **[Java](https://www.java.com/)** (Versão 11, 17 ou superior)
+* **[Spring Boot](https://spring.io/projects/spring-boot)** - Setup e configuração simplificada
+* **[Spring Web](https://docs.spring.io/spring-framework/reference/web.html)** - Criação dos endpoints REST
+* **[Spring Data JPA](https://spring.io/projects/spring-data-jpa)** - Integração com banco de dados e ORM
+* **[Maven](https://maven.apache.org/)** - Gerenciamento de dependências
+* **Banco de Dados:** H2 (para desenvolvimento/testes) ou MySQL/PostgreSQL
+
+---
+
+## ⚙️ Como executar o projeto localmente
+
+**1. Clone o repositório:**
+```bash
+git clone [https://github.com/Andre2353/Usuario_Springboot.git](https://github.com/Andre2353/Usuario_Springboot.git)
